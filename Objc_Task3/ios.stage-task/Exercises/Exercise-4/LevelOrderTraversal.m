@@ -1,5 +1,7 @@
 #import "LevelOrderTraversal.h"
+#import "TreeNode.h"
 
 NSArray *LevelOrderTraversalForTree(NSArray *tree) {
-    return nil;
+    TreeNode *builtTree = [TreeNode treeFromPreorder:[tree mutableCopy]];
+    return builtTree == nil ? @[] : [builtTree levelOrderTraversal];
 }
